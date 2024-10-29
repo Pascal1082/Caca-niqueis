@@ -1,0 +1,83 @@
+body {
+    background: linear-gradient(45deg, #000, #222, #555);
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slot-machine {
+    background: radial-gradient(circle, #ffcc00, #ff9900);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+    width: 350px;
+    border: 8px solid #444;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reels {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.reel {
+    width: 100px;
+    height: 100px;
+    background-color: #333;
+    border: 5px solid #666;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5em;
+    color: #FFD700;
+    animation: spin 2s ease-out; /* Ajustado para simular desaceleração */
+}
+
+@keyframes spin {
+    0% { transform: rotateX(0deg); }
+    100% { transform: rotateX(360deg); }
+}
+
+.spin-animation {
+    animation: reveal 0.5s forwards;
+}
+
+@keyframes reveal {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.5em;
+    background-color: #FF0000;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 5px #C00;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+button:active {
+    box-shadow: 0 2px #C00;
+    transform: translateY(3px);
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.5em;
+    text-shadow: 2px 2px 5px black;
+    font-weight: bold;
+}
